@@ -24,7 +24,7 @@ object AlarmHelper {
 
         // 2. PendingIntent untuk showIntent (AlarmClockInfo)
         val showIntent = Intent(context, AlarmActivity::class.java).apply {
-            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
+            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP)
         }
         val showPending = PendingIntent.getActivity(context, 1002, showIntent, flags)
 
